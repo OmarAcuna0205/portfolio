@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-*{
-    font-family: Outfit;
+@theme {
+  --font-playfair: var(--font-playfair), serif;
 }

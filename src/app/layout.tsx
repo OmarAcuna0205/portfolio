@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
-  title: "Omar Acuña — Full Stack Developer",
-  description: "Full stack developer based in Chihuahua, Mexico. Building modern web applications",
+  title: "Portfolio",
+  description:
+    "Welcome to my portfolio website! I'm a passionate web developer specializing in creating stunning and functional websites. Explore my projects and skills, and feel free to get in touch!",
 };
 
 export default function RootLayout({
@@ -24,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${playfair.className} antialiased`}>
+      <body className={`${playfair.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
