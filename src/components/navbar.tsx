@@ -23,7 +23,7 @@ const Navbar = () => {
       </a>
 
       {/* Desktop menu */}
-      <ul className="hidden items-center gap-6 rounded-full bg-white/50 px-12 py-3 shadow-sm md:flex">
+      <ul className="hidden items-center gap-6 rounded-full bg-white/50 px-12 py-3 shadow-md md:flex">
         {NAV_LINKS.map(({ label, href }) => (
           <li key={href}>
             <a className="font-playfair" href={href}>
@@ -40,7 +40,7 @@ const Navbar = () => {
         </button>
         <a
           href="#contact"
-          className="font-playfair ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 lg:flex"
+          className="font-jakarta ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 lg:flex"
         >
           Contact
           <Image src={assets.arrow_icon} alt="Arrow" className="w-3" />

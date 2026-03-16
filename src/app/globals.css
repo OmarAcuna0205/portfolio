@@ -2,4 +2,5 @@
 
 @theme {
   --font-playfair: var(--font-playfair), serif;
+  --font-jakarta: var(--font-jakarta), sans-serif;
 }
