@@ -3,4 +3,11 @@
 @theme {
   --font-playfair: var(--font-playfair), serif;
   --font-jakarta: var(--font-jakarta), sans-serif;
+
+  --color-lightHover: #f5f5f4;
+  --color-darkHover: #262626;
+  --color-darkTheme: #171717;
+
+  --shadow-black: 4px 4px 0px 0px #171717;
+  --shadow-white: 4px 4px 0px 0px #f5f5f4;
 }

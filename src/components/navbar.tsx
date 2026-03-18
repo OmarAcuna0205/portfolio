@@ -40,7 +40,7 @@ const Navbar = () => {
         </button>
         <a
           href="#contact"
-          className="font-jakarta ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 lg:flex"
+          className="font-jakarta hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 lg:flex"
         >
           Contact
           <Image src={assets.arrow_icon} alt="Arrow" className="w-3" />

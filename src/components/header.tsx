@@ -12,13 +12,14 @@ const Header = () => {
         />
       </div>
       <h3 className="font-playfair mb-3 flex items-end gap-2 text-xl md:text-2xl">
-        Hello, Im Omar Acuña
+        Hello, I am Omar Acuña
       </h3>
       <h1 className="font-playfair text-3xl sm:text-6xl lg:text-[66px]">
         Full Stack Developer
       </h1>
       <p className="font-jakarta mx-auto max-w-2xl">
-        Looking for a junior opportunity to grow and contribute.
+        Looking for a junior opportunity to grow and contribute to real
+        products.
       </p>
       <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
         <a
