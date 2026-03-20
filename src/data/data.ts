@@ -1,4 +1,5 @@
 import { assets } from "@/assets/assets";
+import { GraduationCap, Briefcase, Code } from "lucide-react";
 
 export const workData = [
   {
@@ -25,20 +26,20 @@ export const workData = [
 
 export const serviceData = [
   {
-    icon: assets.web_icon,
+    Icon: assets.web_icon,
     title: "Frontend Development",
     description:
       "Full stack PERN applications with TypeScript, React, Node.js, Express and PostgreSQL. Modern web apps with Next.js and Tailwind CSS.",
     link: "",
   },
   {
-    icon: assets.mobile_icon,
+    Icon: assets.mobile_icon,
     title: "Backend Development",
     description: "REST APIs built with Node.js and Express.",
     link: "",
   },
   {
-    icon: assets.code_icon,
+    Icon: assets.code_icon,
     title: "Database Design",
     description:
       "Data modeling and queries with PostgreSQL and SQL Server. ORM experience with Prisma.",
@@ -48,22 +49,19 @@ export const serviceData = [
 
 export const infoList = [
   {
-    icon: assets.code_icon,
-    iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "TypeScript, JavaScript, SQL.",
-  },
-  {
-    icon: assets.edu_icon,
-    iconDark: assets.edu_icon_dark,
+    Icon: GraduationCap,
     title: "Education",
-    description: "B.S. Computer Systems.",
+    items: ["B.S. Computer Systems"],
   },
   {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
+    Icon: Briefcase,
     title: "Experience",
-    description: "Intern at Visteon,\nIntern at Ford.",
+    items: ["Intern at Visteon", "Intern at Ford"],
+  },
+  {
+    Icon: Code,
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "SQL"],
   },
 ];
 

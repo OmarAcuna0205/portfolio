@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { ArrowRight, Download } from "lucide-react";
 
 const Header = () => {
   return (
@@ -27,7 +28,7 @@ const Header = () => {
           className="font-jakarta flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white"
         >
           Contact me
-          <Image src={assets.right_arrow_white} alt="Contact" className="w-4" />
+          <ArrowRight className="h-4 w-4" />
         </a>
 
         <a
@@ -36,7 +37,7 @@ const Header = () => {
           className="font-jakarta flex items-center gap-2 rounded-full border border-gray-500 px-10 py-3"
         >
           My resume
-          <Image src={assets.download_icon} alt="Resume" className="w-4" />
+          <Download className="h-4 w-4" />
         </a>
       </div>
     </div>

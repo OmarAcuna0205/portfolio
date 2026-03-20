@@ -25,14 +25,18 @@ const About = () => {
           </p>
 
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
+            {infoList.map(({ Icon, title, items }, index) => (
               <li
                 className="cursor-pointer rounded-xl border-[0.5px] border-gray-500 p-6 duration-500 hover:-translate-y-1 hover:shadow-black"
                 key={index}
               >
-                <Image src={icon} alt={title} className="mt-3 w-7" />
+                <Icon className="h-8 w-8 text-black" />
                 <h3 className="font-jakarta my-4 text-gray-700">{title}</h3>
-                <p className="text-sm text-gray-600">{description}</p>
+                <div className="flex flex-col gap-1 text-sm text-gray-600">
+                  {items.map((item, i) => (
+                    <span key={i}>{item}</span>
+                  ))}
+                </div>
               </li>
             ))}
           </ul>
