@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import { Moon, ArrowRight, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -13,16 +15,38 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed z-50 flex w-full items-center justify-between px-8 py-5 lg:px-10 xl:px-12">
+    <nav
+      className={`fixed z-50 flex w-full items-center justify-between px-8 py-3 transition-all duration-300 ease-in-out lg:px-10 xl:px-12 ${isScrolled ? "bg-white/90 shadow-sm backdrop-blur-lg" : ""}`}
+    >
       <a href="#top">
         <Image src={assets.logo} alt="OA Logo" className="w-12" />
       </a>
 
-      <ul className="hidden items-center gap-6 rounded-full bg-white/50 px-12 py-3 shadow-md md:flex">
+      <ul
+        className={`hidden items-center gap-6 rounded-full px-12 py-3 transition-all duration-300 ease-in-out md:flex ${isScrolled ? "" : "bg-white/50 shadow-md"}`}
+      >
         {NAV_LINKS.map(({ label, href }) => (
           <li key={href}>
             <a className="font-playfair" href={href}>

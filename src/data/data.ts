@@ -1,5 +1,12 @@
 import { assets } from "@/assets/assets";
-import { GraduationCap, Briefcase, Code } from "lucide-react";
+import {
+  GraduationCap,
+  Briefcase,
+  Code,
+  Layout,
+  Server,
+  Database,
+} from "lucide-react";
 
 export const workData = [
   {
@@ -26,23 +33,24 @@ export const workData = [
 
 export const serviceData = [
   {
-    Icon: assets.web_icon,
+    Icon: Layout,
     title: "Frontend Development",
     description:
-      "Full stack PERN applications with TypeScript, React, Node.js, Express and PostgreSQL. Modern web apps with Next.js and Tailwind CSS.",
+      "Responsive UIs with React and Next.js. Tailwind CSS and Framer Motion focused on clean UX/UI.",
     link: "",
   },
   {
-    Icon: assets.mobile_icon,
+    Icon: Server,
     title: "Backend Development",
-    description: "REST APIs built with Node.js and Express.",
+    description:
+      "REST APIs with Node.js and Express. Auth, middleware, and real production internship experience.",
     link: "",
   },
   {
-    Icon: assets.code_icon,
+    Icon: Database,
     title: "Database Design",
     description:
-      "Data modeling and queries with PostgreSQL and SQL Server. ORM experience with Prisma.",
+      "PostgreSQL and SQL Server with Prisma ORM. Backend-as-a-service experience using Supabase.",
     link: "",
   },
 ];

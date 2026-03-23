@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div id="about" className="mx-auto w-11/12 max-w-5xl scroll-mt-20 py-10">
+    <div
+      id="about"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-4 py-10"
+    >
       <h4 className="font-jakarta mb-2 text-center text-lg">Introduction</h4>
       <h2 className="font-playfair text-center text-5xl">About me</h2>
 
@@ -17,11 +20,10 @@ const About = () => {
           />
         </div>
         <div className="flex-1">
-          <p className="font-jakarta mb-10 text-justify">
+          <p className="font-jakarta mb-10 text-center">
             Full-stack developer specializing in PERN stack and Next.js with
             Supabase. One year of enterprise internship experience in production
-            environments. Seeking a junior role to contribute to real products
-            and grow within a strong engineering team.
+            environments.
           </p>
 
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
