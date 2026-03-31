@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Moon, ArrowRight, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [

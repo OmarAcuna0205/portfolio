@@ -1,4 +1,5 @@
 import { assets } from "@/assets/assets";
+
 import {
   GraduationCap,
   Briefcase,
@@ -6,28 +7,30 @@ import {
   Layout,
   Server,
   Database,
+  Send,
 } from "lucide-react";
 
 export const workData = [
   {
-    title: "Portfolio",
-    description: "Next.js · TypeScript · Tailwind · Framer Motion",
-    bgImage: "/work-1.png",
-  },
-  {
     title: "Alejandro Prieto",
-    description: "Next.js · TypeScript · Supabase · Prisma",
+    description: "Next.js · Supabase",
+    release: "Coming May 2026",
+    bgImage: "/work-1.png",
+    icon: Send,
+  },
+  {
+    title: "skeeter",
+    description: "PERN Stack",
+    release: "Coming August 2026",
     bgImage: "/work-2.png",
+    icon: Send,
   },
   {
-    title: "Snap Back",
-    description: "React · Node.js · Express · PostgreSQL",
+    title: "o-CUU-po jale",
+    description: "PERN Stack",
+    release: "Coming November 2026",
     bgImage: "/work-3.png",
-  },
-  {
-    title: "GPI",
-    description: "React · Node.js · Express · PostgreSQL · WebSockets",
-    bgImage: "/work-4.png",
+    icon: Send,
   },
 ];
 
@@ -35,22 +38,25 @@ export const serviceData = [
   {
     Icon: Layout,
     title: "Frontend Development",
-    description:
-      "Responsive UIs with React and Next.js. Tailwind CSS and Framer Motion focused on clean UX/UI.",
+    items: [
+      "Responsive UI design with React.",
+      "Animations with Framer Motion.",
+    ],
     link: "",
   },
   {
     Icon: Server,
     title: "Backend Development",
-    description:
-      "REST APIs with Node.js and Express. Auth, middleware, and real production internship experience.",
+    items: [
+      "REST APIs with Node.js and Express.",
+      "Real production experience.",
+    ],
     link: "",
   },
   {
     Icon: Database,
-    title: "Database Design",
-    description:
-      "PostgreSQL and SQL Server with Prisma ORM. Backend-as-a-service experience using Supabase.",
+    title: "Database Design.",
+    items: ["PostgreSQL alone or via Supabase", "Modeled using Prisma ORM."],
     link: "",
   },
 ];
@@ -59,7 +65,7 @@ export const infoList = [
   {
     Icon: GraduationCap,
     title: "Education",
-    items: ["B.S. Computer Systems"],
+    items: ["8th semester B.S. Computer Science"],
   },
   {
     Icon: Briefcase,

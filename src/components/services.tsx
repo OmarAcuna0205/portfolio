@@ -11,21 +11,25 @@ const Services = () => {
       <h2 className="font-playfair text-center text-5xl">My services</h2>
 
       <p className="font-jakarta mx-auto mt-5 mb-12 max-w-2xl text-center">
-        I'm early in my career, but I build real things. These are the areas
-        where I'm focused:
+        I&apos;m early in my career, but I build real things. These are the
+        areas where I&apos;m focused:
       </p>
 
       <div className="my-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {serviceData.map(({ Icon, title, description, link }, index) => (
+        {serviceData.map(({ Icon, title, items, link }, index) => (
           <div
             key={index}
             className="rounded-lg border border-black px-8 py-8 duration-500 hover:-translate-y-1 hover:shadow-black"
           >
             <Icon className="w-20" />
             <h3 className="font-jakarta my-4 text-lg font-bold">{title}</h3>
-            <p className="font-jakarta my-2 text-justify text-sm">
-              {description}
-            </p>
+
+            <div className="font-jakarta my-2 flex flex-col gap-1 text-justify text-sm text-gray-600">
+              {items.map((item, i) => (
+                <span key={i}>{item}</span>
+              ))}
+            </div>
+
             <a
               className="mt-5 flex cursor-pointer items-center gap-2 text-gray-500 hover:text-black"
               href={link}
