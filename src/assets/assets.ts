@@ -41,6 +41,10 @@ import nodejs from "./images/nodejs.svg";
 import expressjs from "./images/expressjs.svg";
 import postgresql from "./images/postgresql.svg";
 import supabase from "./images/supabase.svg";
+import github from "./images/github.svg";
+import gmail from "./images/gmail.svg";
+import linkedin from "./images/linkedin.svg";
+import whatsapp from "./images/whatsapp-icon.svg";
 
 export const assets = {
   user_image,
@@ -86,4 +90,8 @@ export const assets = {
   expressjs,
   postgresql,
   supabase,
+  github,
+  gmail,
+  linkedin,
+  whatsapp,
 };

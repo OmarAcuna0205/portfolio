@@ -8,7 +8,7 @@ export const Work = () => {
 
       <p className="font-jakarta mx-auto mt-5 mb-12 max-w-2xl text-center">
         Explore a collection of projects showcasing my expertise in full stack
-        development
+        development.
       </p>
 
       <div className="my-10 grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
