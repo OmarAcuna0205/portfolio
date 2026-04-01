@@ -29,7 +29,7 @@ const About = () => {
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {infoList.map(({ Icon, title, items }, index) => (
               <li
-                className="cursor-pointer rounded-xl border-[0.5px] border-gray-500 p-6 duration-500 hover:-translate-y-1 hover:shadow-black"
+                className="cursor-pointer rounded-xl border-[0.5px] border-gray-500 p-4 duration-500 hover:-translate-y-1 hover:shadow-black"
                 key={index}
               >
                 <Icon className="h-8 w-8 text-black" />
