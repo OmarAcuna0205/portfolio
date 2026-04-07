@@ -80,10 +80,10 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.nextjs,
-  assets.supabase,
-  assets.react,
-  assets.nodejs,
-  assets.expressjs,
-  assets.postgresql,
+  { light: assets.nextjs },
+  { light: assets.supabase },
+  { light: assets.react },
+  { light: assets.nodejs },
+  { light: assets.expressjs, dark: assets.expressjs_white },
+  { light: assets.postgresql },
 ];

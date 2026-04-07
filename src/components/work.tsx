@@ -18,7 +18,7 @@ export const Work = () => {
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
-            <div className="absolute bottom-5 left-1/2 flex w-10/12 -translate-x-1/2 cursor-pointer items-center justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7">
+            <div className="absolute bottom-5 left-1/2 flex w-10/12 -translate-x-1/2 cursor-pointer items-center justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7 dark:bg-black dark:text-white">
               <div>
                 <h2 className="font-jakarta text-lg font-semibold">
                   {project.title}

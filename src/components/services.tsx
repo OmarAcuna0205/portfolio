@@ -19,19 +19,19 @@ const Services = () => {
         {serviceData.map(({ Icon, title, items, link }, index) => (
           <div
             key={index}
-            className="rounded-lg border border-black px-8 py-8 duration-500 hover:-translate-y-1 hover:shadow-black"
+            className="rounded-lg border border-black px-8 py-8 duration-500 hover:-translate-y-1 hover:shadow-black dark:border-white dark:hover:shadow-white"
           >
             <Icon className="w-20" />
             <h3 className="font-jakarta my-4 text-lg font-bold">{title}</h3>
 
-            <div className="font-jakarta my-2 flex flex-col gap-1 text-justify text-sm text-gray-600">
+            <div className="font-jakarta my-2 flex flex-col gap-1 text-justify text-sm text-black dark:text-white">
               {items.map((item, i) => (
                 <span key={i}>{item}</span>
               ))}
             </div>
 
             <a
-              className="mt-5 flex cursor-pointer items-center gap-2 text-gray-500 hover:text-black"
+              className="mt-5 flex cursor-pointer items-center gap-2 text-black underline hover:text-black dark:text-white dark:hover:text-white"
               href={link}
             >
               Read more

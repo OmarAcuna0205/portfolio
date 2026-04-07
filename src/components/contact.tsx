@@ -31,14 +31,14 @@ export const Contact = () => {
             name="name"
             placeholder="Enter your name"
             required
-            className="flex-1 rounded-md border-2 border-black bg-white/50 p-3 outline-none"
+            className="flex-1 rounded-md border-2 border-black bg-white/50 p-3 outline-none dark:border-white dark:bg-black/50"
           />
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
             required
-            className="flex-1 rounded-md border-2 border-black bg-white/50 p-3 outline-none"
+            className="flex-1 rounded-md border-2 border-black bg-white/50 p-3 outline-none dark:border-white dark:bg-black/50"
           />
         </div>
 
@@ -47,13 +47,13 @@ export const Contact = () => {
           rows={6}
           placeholder="Enter your message"
           required
-          className="mb-6 w-full rounded-md border-2 border-black bg-white/50 p-4 outline-none"
+          className="mb-6 w-full rounded-md border-2 border-black bg-white/50 p-4 outline-none dark:border-white dark:bg-black/50"
         />
 
         <button
           type="submit"
           disabled={status === "sending"}
-          className="mx-auto flex w-max cursor-pointer items-center justify-between gap-3 rounded-full bg-black px-8 py-3 text-white shadow-sm disabled:opacity-60"
+          className="mx-auto flex w-max cursor-pointer items-center justify-between gap-3 rounded-full bg-black px-8 py-3 text-white shadow-sm disabled:opacity-60 dark:bg-white dark:text-black"
         >
           Submit now
           <Mail />

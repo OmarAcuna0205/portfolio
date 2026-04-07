@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
-export const Footer = () => {
+interface NavbarProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Footer = ({ isDarkMode }: NavbarProps) => {
   return (
     <div className="mt-20">
       <div className="mt-12 items-center justify-between border-t px-8 py-6 text-center sm:flex">
@@ -13,7 +18,11 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={assets.github} alt="GitHub" className="w-8" />
+              {isDarkMode ? (
+                <Image src={assets.github_white} alt="GitHub" className="w-8" />
+              ) : (
+                <Image src={assets.github} alt="GitHub" className="w-8" />
+              )}
             </a>
           </li>
           <li className="cursor-pointer duration-500 hover:-translate-y-1">

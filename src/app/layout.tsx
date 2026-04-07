@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${playfair.variable} ${jakarta.variable} overflow-x-hidden font-sans leading-8 antialiased`}
+        className={`${playfair.variable} ${jakarta.variable} overflow-x-hidden font-sans leading-8 antialiased dark:bg-black dark:text-white`}
       >
         {children}
       </body>

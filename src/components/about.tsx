@@ -29,12 +29,14 @@ const About = () => {
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {infoList.map(({ Icon, title, items }, index) => (
               <li
-                className="cursor-pointer rounded-xl border-[0.5px] border-gray-500 p-4 duration-500 hover:-translate-y-1 hover:shadow-black"
+                className="cursor-pointer rounded-xl border-[0.5px] border-black p-4 duration-500 hover:-translate-y-1 hover:shadow-black dark:border-white dark:hover:shadow-white"
                 key={index}
               >
-                <Icon className="h-8 w-8 text-black" />
-                <h3 className="font-jakarta my-4 text-gray-700">{title}</h3>
-                <div className="flex flex-col gap-1 text-sm text-gray-600">
+                <Icon className="h-8 w-8 text-black dark:text-white" />
+                <h3 className="font-jakarta my-4 text-black dark:text-white">
+                  {title}
+                </h3>
+                <div className="flex flex-col gap-1 text-sm text-black dark:text-white">
                   {items.map((item, i) => (
                     <span key={i}>{item}</span>
                   ))}
@@ -48,10 +50,23 @@ const About = () => {
           <ul className="flex w-full items-center justify-between sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
-                className="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-lg border border-gray-400 duration-500 hover:-translate-y-1 sm:w-14"
+                className="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-lg border border-black duration-500 hover:-translate-y-1 sm:w-14 dark:border-white"
                 key={index}
               >
-                <Image src={tool} alt="tools" className="w-5 sm:w-7" />
+                <Image
+                  src={tool.light}
+                  alt="tools"
+                  className={
+                    tool.dark ? "w-5 sm:w-7 dark:hidden" : "w-5 sm:w-7"
+                  }
+                />
+                {tool.dark && (
+                  <Image
+                    src={tool.dark}
+                    alt="tools"
+                    className="hidden w-5 sm:w-7 dark:block"
+                  />
+                )}
               </li>
             ))}
           </ul>

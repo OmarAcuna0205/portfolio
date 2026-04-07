@@ -25,7 +25,7 @@ const Header = () => {
       <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
         <a
           href="#contact"
-          className="font-jakarta flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white"
+          className="font-jakarta flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white dark:bg-white dark:text-black"
         >
           Contact me
           <ArrowRight className="h-4 w-4" />
@@ -34,7 +34,7 @@ const Header = () => {
         <a
           href="/my-resume.pdf"
           download
-          className="font-jakarta flex items-center gap-2 rounded-full border border-gray-500 px-10 py-3"
+          className="font-jakarta flex items-center gap-2 rounded-full border border-black px-10 py-3 dark:border-white"
         >
           My resume
           <Download className="h-4 w-4" />
