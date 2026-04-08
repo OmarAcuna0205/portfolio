@@ -56,7 +56,7 @@ export const serviceData = [
   {
     Icon: Database,
     title: "Database Design.",
-    items: ["PostgreSQL alone or via Supabase", "Modeled using Prisma ORM."],
+    items: ["PostgreSQL alone or via Supabase.", "Modeled using Prisma ORM."],
     link: "",
   },
 ];
