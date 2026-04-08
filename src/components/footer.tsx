@@ -1,12 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-interface NavbarProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+export const Footer = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-export const Footer = ({ isDarkMode }: NavbarProps) => {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="mt-20">
       <div className="mt-12 items-center justify-between border-t px-8 py-6 text-center sm:flex">
@@ -17,8 +23,9 @@ export const Footer = ({ isDarkMode }: NavbarProps) => {
               href="https://github.com/OmarAcuna0205"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex h-8 w-8 items-center justify-center"
             >
-              {isDarkMode ? (
+              {!mounted ? null : resolvedTheme === "dark" ? (
                 <Image src={assets.github_white} alt="GitHub" className="w-8" />
               ) : (
                 <Image src={assets.github} alt="GitHub" className="w-8" />

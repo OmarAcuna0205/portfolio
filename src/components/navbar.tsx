@@ -4,6 +4,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useEffect, useState } from "react";
 import { Moon, ArrowRight, Menu, X, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const NAV_LINKS = [
   { label: "Home", href: "#top" },
@@ -13,17 +14,18 @@ const NAV_LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
-interface NavbarProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
       }
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -43,10 +47,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed z-50 flex w-full items-center justify-between px-8 py-3 transition-all duration-300 ease-in-out lg:px-10 xl:px-12 ${isScrolled ? "bg-white/90 shadow-sm backdrop-blur-lg dark:bg-black/50 dark:shadow-white/90" : ""}`}
+      className={`fixed z-50 flex w-full items-center justify-between px-8 py-3 transition-all duration-300 ease-in-out lg:px-10 xl:px-12 ${
+        isScrolled
+          ? "bg-white/90 shadow-sm backdrop-blur-lg dark:bg-black/50 dark:shadow-white/90"
+          : ""
+      } ${!mounted ? "-translate-y-4 opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <a href="#top">
-        {isDarkMode ? (
+        {!mounted ? (
+          <div className="h-12 w-12 opacity-0" />
+        ) : resolvedTheme === "dark" ? (
           <Image src={assets.logo_white} alt="OA Logo" className="w-12" />
         ) : (
           <Image src={assets.logo} alt="OA Logo" className="w-12" />
@@ -67,11 +77,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
 
       <div className="flex items-center gap-4">
         <button
-          onClick={() => setIsDarkMode((prev) => !prev)}
+          onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
           aria-label="Toggle Theme"
-          className="cursor-pointer duration-500 hover:-translate-y-1"
+          className="flex h-8 w-8 cursor-pointer items-center justify-center duration-500 hover:-translate-y-1"
         >
-          {isDarkMode ? (
+          {!mounted ? null : resolvedTheme === "dark" ? (
             <Sun className="h-8 w-8" />
           ) : (
             <Moon className="h-8 w-8" />

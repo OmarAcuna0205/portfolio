@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeProvider } from "@/services/themeProvider";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -24,11 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${jakarta.variable} overflow-x-hidden font-sans leading-8 antialiased dark:bg-black dark:text-white`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
