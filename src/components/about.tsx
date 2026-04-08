@@ -68,7 +68,7 @@ const About = () => {
             className="grid grid-cols-1 gap-6 sm:grid-cols-3"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             {infoList.map(({ Icon, title, items }, index) => (
               <motion.li
@@ -93,7 +93,7 @@ const About = () => {
             className="font-jakarta my-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
             Tools I use:
           </motion.h4>
@@ -102,7 +102,7 @@ const About = () => {
             className="flex w-full items-center justify-between sm:gap-5"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
           >
             {toolsData.map((tool, index) => (
               <motion.li
