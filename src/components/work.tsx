@@ -8,13 +8,13 @@ export const Work = () => {
       className="mx-auto w-full max-w-5xl scroll-mt-20 px-4 py-10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <motion.h4
         className="font-jakarta mb-2 text-center text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         My portfolio
       </motion.h4>
@@ -31,7 +31,7 @@ export const Work = () => {
         className="font-jakarta mx-auto mt-5 mb-12 max-w-2xl text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         Explore a collection of projects showcasing my expertise in full stack
         development.
@@ -41,7 +41,7 @@ export const Work = () => {
         className="my-10 grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         {workData.map((project, index) => (
           <motion.div
@@ -49,7 +49,7 @@ export const Work = () => {
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
             whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="absolute bottom-5 left-1/2 flex w-10/12 -translate-x-1/2 cursor-pointer items-center justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7 dark:bg-black dark:text-white">
               <div>

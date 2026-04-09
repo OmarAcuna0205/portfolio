@@ -20,7 +20,7 @@ const Header = () => {
       <motion.h3
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="font-playfair mb-3 flex items-end gap-2 text-xl md:text-2xl"
       >
         Hello, I am Omar Acuña
@@ -28,7 +28,7 @@ const Header = () => {
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="font-playfair text-3xl sm:text-6xl lg:text-[66px]"
       >
         Full Stack Developer
@@ -36,7 +36,7 @@ const Header = () => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="font-jakarta mx-auto max-w-2xl"
       >
         Looking for a junior opportunity to grow and contribute to real
@@ -46,7 +46,7 @@ const Header = () => {
         <motion.a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           href="#contact"
           className="font-jakarta flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white dark:bg-white dark:text-black"
         >
@@ -57,7 +57,7 @@ const Header = () => {
         <motion.a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           href="/my-resume.pdf"
           download
           className="font-jakarta flex items-center gap-2 rounded-full border border-black px-10 py-3 dark:border-white"

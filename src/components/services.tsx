@@ -9,13 +9,13 @@ const Services = () => {
       className="mx-auto w-full max-w-5xl scroll-mt-20 px-4 py-10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <motion.h4
         className="font-jakarta mb-2 text-center text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         What I Offer
       </motion.h4>
@@ -32,7 +32,7 @@ const Services = () => {
         className="font-jakarta mx-auto mt-5 mb-12 max-w-2xl text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         I&apos;m early in my career, but I build real things. These are the
         areas where I&apos;m focused:
@@ -42,7 +42,7 @@ const Services = () => {
         className="my-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         {serviceData.map(({ Icon, title, items, link }, index) => (
           <motion.div
