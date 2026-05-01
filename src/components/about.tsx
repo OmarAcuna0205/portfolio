@@ -1,5 +1,6 @@
 import { assets } from "@/assets/assets";
 import { infoList, toolsData } from "@/data/data";
+import { once } from "events";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -10,12 +11,14 @@ const About = () => {
       className="mx-auto w-full max-w-5xl scroll-mt-20 px-4 py-10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
       <motion.h4
         className="font-jakarta mb-2 text-center text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         Introduction
@@ -24,6 +27,7 @@ const About = () => {
         className="font-playfair text-center text-5xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         About me
@@ -33,12 +37,14 @@ const About = () => {
         className="my-20 flex w-full flex-col items-center gap-20 lg:flex-row"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
         <motion.div
           className="w-64 rounded-3xl sm:w-80"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
           <Image
@@ -51,12 +57,14 @@ const About = () => {
           className="flex-1"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <motion.p
             className="font-jakarta mb-10 text-center"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             Full-stack developer specializing in PERN stack and Next.js with
@@ -68,6 +76,7 @@ const About = () => {
             className="grid grid-cols-1 gap-6 sm:grid-cols-3"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             {infoList.map(({ Icon, title, items }, index) => (
@@ -93,6 +102,7 @@ const About = () => {
             className="font-jakarta my-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             Tools I use:
@@ -102,6 +112,7 @@ const About = () => {
             className="flex w-full items-center justify-between sm:gap-5"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             {toolsData.map((tool, index) => (
